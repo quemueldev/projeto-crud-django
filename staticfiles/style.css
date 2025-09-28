@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(66, 42, 5);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+:root {
+    --primary: #e09200;
+    --secondary: #f8b500;
+    --terciary: #fceabb;
+    --letraum: #c2b280;
+    --letradois: #e6d7a3;
+    --letratres: #fdfcfb;
+}
+nav{
+    background-image: linear-gradient(to right, var(--primary)25%, var(--secondary),  rgb(122, 65, 0));
+    border:2px solid white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    opacity: 0.8;
+}
+.tituloum{
+    height: 60px;
+    padding: 6px;
+}
+main{
+    height: 100vh;
+    margin-top: 120px;
+    width: 85%;
+    max-width: 85%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid white;
+}
+
+.cachorro{
+    gap: 10px;
+}
+.form{
+    color: white;
+    background-image:linear-gradient(to right, var(--primary)30%, rgb(122, 65, 0));
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    border:2px solid white ;
+    padding: 5px;
+}
+.formin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.enviar{
+    background-color: rgb(3, 180, 3);
+    border: 2px solid white;
+    height: 30px;
+    width: 80px;
+    border-radius: 16px;
+
+}
+.enviar:hover{
+    box-shadow: 0px 5px 15px white;
+    transform: translateY(-5px);
+
+}
+.caixa_cachorro{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 8px;
+    height: 40px;
+    max-height: 40px;
+    border-radius: 12px;
+    border: 1px solid white;
+}
+.input{
+    height: 25px;
+    width: 150px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+.input:hover{
+    transform: translateY(-2px);
+    transform: scale(200px);
+}
+.btdell{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border: 1px solid white;
+    border-radius: 6px;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+label{
+    font-size: x-large;
+    font-weight: bold;
+}
