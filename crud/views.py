@@ -21,6 +21,9 @@ def test(request):
 def deletar_cachorro(request, id):
     Cachorro = get_object_or_404(cachorro, id=id)
     Cachorro.delete()
+
+
     return redirect('test')
+
 
 
