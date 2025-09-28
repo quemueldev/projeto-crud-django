@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+<h1 class="tituloum">crud feito com django</h1>
+        </nav>
+        
+    </header>
+    <main>
+        <section class="form">
+
+            <h1 class="titulo2">cadastre seu cachorro</h1>
+            <hr>
+            <form action="{% url 'test'%}" method="POST" class="formin">{% csrf_token %}
+                <label>digite o nome</label>
+                <input type="text" name="nome" class="input">
+                <label>digite a raça</label>
+                <input list="racas" type="text" name="raca" class="input">
+                <datalist id="racas">
+                    <option value="P. alemão"></option>
+                    <option value="Poodle"></option>
+                    <option value="Pinscher"></option>
+                    <option value="Husky"></option>
+                    <option value="Rottweiler"></option>
+                    <option value="Pit bull"></option>
+                    <option value="caramelo"></option>
+                </datalist>
+                <input type="submit" class="enviar">
+
+            </form>
+        </section>
+        <section class="cachorros">
+            {% for i in banco %}
+            <div class="caixa_cachorro">
+            <h1>{{i.nome}}</h1> 
+            <h1>{{i.raca}}</h1>
+            <a href="{% url 'deletar_cachorro' i.id %}" class="btdell">deletar</a>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>
